@@ -9,5 +9,5 @@ enum class TranslateError {
 
 //kotlin exception to throw error in case of translation error
 class TranslateException(val error: TranslateError): Exception(
-    message = "An error occurred when translating: $error"
+    "An error occurred when translating: $error"
 )

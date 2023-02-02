@@ -1,14 +1,12 @@
 package com.example.myfirstkmmapp.translate.data.local
 
-import android.content.Context
 import com.example.myfirstkmmapp.database.TranslateDatabase
-import com.squareup.sqldelight.android.AndroidSqliteDriver
 import com.squareup.sqldelight.db.SqlDriver
+import com.squareup.sqldelight.drivers.native.NativeSqliteDriver
 
-actual class DatabaseDriverFactory(
-    private val context: Context
-) {
+
+actual class DatabaseDriverFactory {
     actual fun create(): SqlDriver {
-        return AndroidSqliteDriver(TranslateDatabase.Schema, context, "translate.db")
+        return NativeSqliteDriver(TranslateDatabase.Schema,  "translate.db")
     }
 }
