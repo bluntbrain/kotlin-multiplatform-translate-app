@@ -1,4 +1,9 @@
 package com.example.myfirstkmmapp.android
 
-class TranslateApp {
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class TranslateApp: Application() {
+
 }
